@@ -72,7 +72,7 @@ TransactionError BroadcastTransaction(NodeContext& node, const CTransactionRef t
     } // cs_main
 
     if (callback_set) {
-        // Wait until Validation Interface clients have been notified of the
+        // Wait until ValidationInterface clients have been notified of the
         // transaction entering the mempool.
         promise.get_future().wait();
     }
